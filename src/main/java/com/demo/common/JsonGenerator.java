@@ -26,6 +26,17 @@ public class JsonGenerator {
 			mapper.writeValue(
 					new File("/Users/ymishra/Personal/Intuit/projects/Spring/src/main/resources/payAccount.json"),
 					payAccount);
+			
+			mapper.writeValue(
+					new File("/Users/ymishra/Personal/Intuit/projects/Spring/src/main/resources/address.json"),
+					payAccount.getBusinessOwnerList().get(0).getAddress());
+			
+			String jsonInString = mapper.writeValueAsString(payAccount);
+			System.out.println(jsonInString);
+			
+			String jsonInStringAddress = mapper.writeValueAsString(payAccount);
+			System.out.println(jsonInStringAddress);
+
 		} catch (JsonGenerationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -51,8 +62,8 @@ public class JsonGenerator {
 		businessInfo.setLegalName("IMS GLOBAL INC.");
 
 		Address address = new Address();
-		address.setStreetAddress("3245 Hubbard Street");
-		address.setCity("Sherman Oaks");
+		address.setStreetAddress("3245 Sesame St.");
+		address.setCity("Northridge");
 		address.setState("CA");
 		address.setZip("91411");
 		address.setCountry("USA");
@@ -91,6 +102,7 @@ public class JsonGenerator {
 					PaymentAccount.class);
 			
 			System.out.println(payAccount.getAccountNumber());
+			
 			
 		} catch (JsonParseException e) {
 			// TODO Auto-generated catch block

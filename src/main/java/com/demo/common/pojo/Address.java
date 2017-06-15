@@ -1,11 +1,33 @@
 package com.demo.common.pojo;
 
-public class Address {
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+//ADDRESS class can be used as a xml or json object although annotated with xml annotations
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Address {
+	
+	@XmlAttribute
+	private int id;
+	
+	@XmlElement(name="STREETADDRESS")
 	private String streetAddress;
+	
+	@XmlElement
 	private String city;
+	
+	@XmlElement
 	private String state;
+	
+	@XmlElement
 	private String zip;
+	
+	@XmlElement
 	private String country;
 	public String getStreetAddress() {
 		return streetAddress;
@@ -36,6 +58,12 @@ public class Address {
 	}
 	public void setCountry(String country) {
 		this.country = country;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	

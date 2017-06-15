@@ -13,5 +13,8 @@ public class HelloWorld {
 		JsonGenerator json = new JsonGenerator();
 		json.generateJson();
 		json.readJson();
+		
+		XMLGenerator xml = new XMLGenerator();
+		xml.marshall();
 	}
 }
