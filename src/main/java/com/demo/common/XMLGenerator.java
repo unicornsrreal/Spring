@@ -5,6 +5,7 @@ import java.io.File;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 import com.demo.common.pojo.Address;
 
@@ -45,5 +46,19 @@ public class XMLGenerator {
 
 	public void unmarshall() {
 
+		File file = new File("/Users/ymishra/Personal/Intuit/projects/Spring/src/main/resources/address.xml");
+
+		JAXBContext jaxbContext;
+		try {
+			jaxbContext = JAXBContext.newInstance(Address.class);
+			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+			Address address = (Address) jaxbUnmarshaller.unmarshal(file);
+			System.out.println("Unmarshalling address from xml:"+address.getCity());
+		} catch (JAXBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
 	}
 }

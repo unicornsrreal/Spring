@@ -11,8 +11,8 @@
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
-	
-	<!--  Junit dependencies -->
+
+		<!-- Junit dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -20,7 +20,7 @@
 			<scope>test</scope>
 		</dependency>
 
-<!--  Spring dependencies -->
+		<!-- Spring dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -34,7 +34,7 @@
 			<version>4.3.4.RELEASE</version>
 		</dependency>
 
-<!--  Jackson dependency -->
+		<!-- Jackson dependency -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>

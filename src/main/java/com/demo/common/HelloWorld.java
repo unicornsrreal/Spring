@@ -16,5 +16,6 @@ public class HelloWorld {
 		
 		XMLGenerator xml = new XMLGenerator();
 		xml.marshall();
+		xml.unmarshall();
 	}
 }
