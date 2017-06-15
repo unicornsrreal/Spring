@@ -10,8 +10,5 @@ public class HelloWorld {
 	
 	public void printHello() {
 		System.out.println("Hello " + name +"!");
-		JsonGenerator json = new JsonGenerator();
-		json.generateJson();
-		json.readJson();
 	}
 }
